@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class client_sheet extends Model
+{
+    use HasFactory;
+    
+    protected $table="client_sheets";
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+      
+        'from_date',
+        'to_date',
+        'description',
+        'file_name',
+
+
+
+    ];
+
+    protected $casts = [
+        'created_at' => 'date:d-m-Y ',
+        'updated_at'=>'date:d-m-Y '
+    ];
+}
